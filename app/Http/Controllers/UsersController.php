@@ -16,6 +16,8 @@ class UsersController extends Controller
     }
 
     public function login(){
+        $users = User::all();
+        dd($users);
         return Inertia::render('Login');
     }
     public function checkLogin(Request $request){
